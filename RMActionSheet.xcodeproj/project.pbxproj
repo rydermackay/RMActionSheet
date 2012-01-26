@@ -15,6 +15,7 @@
 		0DB0786014C234B300307541 /* RMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0785F14C234B300307541 /* RMAppDelegate.m */; };
 		0DB0786314C234B300307541 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0786114C234B300307541 /* MainStoryboard.storyboard */; };
 		0DB0786614C234B300307541 /* RMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0786514C234B300307541 /* RMViewController.m */; };
+		0DB0786E14C2350600307541 /* RMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0786D14C2350600307541 /* RMActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		0DB0784F14C234B300307541 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0DB0785114C234B300307541 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0DB0785314C234B300307541 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0DB0785714C234B300307541 /* RMActionSheet-Info.plist */ = {isa = PBXFileReference; path = "RMActionSheet-Info.plist"; sourceTree = "<group>"; };
+		0DB0785714C234B300307541 /* RMActionSheet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RMActionSheet-Info.plist"; sourceTree = "<group>"; };
 		0DB0785914C234B300307541 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DB0785B14C234B300307541 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0DB0785D14C234B300307541 /* RMActionSheet-Prefix.pch */ = {isa = PBXFileReference; path = "RMActionSheet-Prefix.pch"; sourceTree = "<group>"; };
-		0DB0785E14C234B300307541 /* RMAppDelegate.h */ = {isa = PBXFileReference; path = RMAppDelegate.h; sourceTree = "<group>"; };
+		0DB0785D14C234B300307541 /* RMActionSheet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMActionSheet-Prefix.pch"; sourceTree = "<group>"; };
+		0DB0785E14C234B300307541 /* RMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMAppDelegate.h; sourceTree = "<group>"; };
 		0DB0785F14C234B300307541 /* RMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMAppDelegate.m; sourceTree = "<group>"; };
 		0DB0786214C234B300307541 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0DB0786414C234B300307541 /* RMViewController.h */ = {isa = PBXFileReference; path = RMViewController.h; sourceTree = "<group>"; };
+		0DB0786414C234B300307541 /* RMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMViewController.h; sourceTree = "<group>"; };
 		0DB0786514C234B300307541 /* RMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMViewController.m; sourceTree = "<group>"; };
+		0DB0786C14C2350600307541 /* RMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMActionSheet.h; sourceTree = "<group>"; };
+		0DB0786D14C2350600307541 /* RMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				0DB0786114C234B300307541 /* MainStoryboard.storyboard */,
 				0DB0786414C234B300307541 /* RMViewController.h */,
 				0DB0786514C234B300307541 /* RMViewController.m */,
+				0DB0786C14C2350600307541 /* RMActionSheet.h */,
+				0DB0786D14C2350600307541 /* RMActionSheet.m */,
 				0DB0785614C234B300307541 /* Supporting Files */,
 			);
 			path = RMActionSheet;
@@ -164,6 +169,7 @@
 				0DB0785C14C234B300307541 /* main.m in Sources */,
 				0DB0786014C234B300307541 /* RMAppDelegate.m in Sources */,
 				0DB0786614C234B300307541 /* RMViewController.m in Sources */,
+				0DB0786E14C2350600307541 /* RMActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

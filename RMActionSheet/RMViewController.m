@@ -8,6 +8,8 @@
 
 #import "RMViewController.h"
 
+#import "RMActionSheet.h"
+
 @implementation RMViewController
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +57,35 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)actionButtonTapped:(id)sender
+{
+    RMActionSheet *actionSheet = [RMActionSheet actionSheetWithTitle:@"Sup?"];
+    
+    
+    [actionSheet addDestructiveButtonWithTitle:@"Destroy"
+                                        action:^{
+                                            NSLog(@"Destroy");
+                                        }];
+    
+    [actionSheet addButtonWithTitle:@"Button 1"
+                             action:^{
+                                 NSLog(@"tapped button 1");
+                             }];
+    
+    [actionSheet addButtonWithTitle:@"Button 2"
+                             action:^{
+                                 NSLog(@"tapped button 2");
+                             }];
+    
+    [actionSheet addCancelButtonWithTitle:@"Cancel"
+                                   action:^{
+                                       NSLog(@"Cancel");
+                                   }];
+    
+    [actionSheet showFromBarButtonItem:sender animated:YES];
+    
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface RMViewController : UIViewController
 
+- (IBAction)actionButtonTapped:(id)sender;
+
 @end
