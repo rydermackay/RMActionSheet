@@ -16,10 +16,21 @@
 @synthesize willDismissBlock;
 @synthesize didDismissBlock;
 
+@synthesize cancelAction;
+
++ (id)actionSheet
+{
+    return [self actionSheetWithTitle:nil];
+}
 
 + (id)actionSheetWithTitle:(NSString *)title
 {
     return [[[self class] alloc] initWithTitle:title];
+}
+
+- (id)init
+{
+    return [self initWithTitle:nil];
 }
 
 - (id)initWithTitle:(NSString *)title
@@ -52,7 +63,10 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 - (void)addButtonWithTitle:(NSString *)title action:(RMActionSheetBlock)action
 {
     [super addButtonWithTitle:title];
-    [actionBlocks addObject:[action copy]];
+    
+    id object = (action != nil) ? [action copy] : [NSNull null];
+    
+    [actionBlocks addObject:object];
 }
 
 - (void)addCancelButtonWithTitle:(NSString *)title action:(RMActionSheetBlock)action
@@ -101,7 +115,7 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 {
     RMActionSheetBlock block = [actionBlocks objectAtIndex:buttonIndex];
     
-    if (block != nil)
+    if ((block != nil) && ([block isEqual:[NSNull null]] == NO))
     {
         block();
     }
@@ -109,7 +123,14 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 
 - (void)actionSheetCancel:(UIActionSheet *)actionSheet
 {
-    
+    if (self.cancelAction != nil)
+    {
+        self.cancelAction();
+    }
+    else
+    {
+        [self dismissWithClickedButtonIndex:self.cancelButtonIndex animated:YES];
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -127,20 +148,5 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
         self.willDismissBlock(actionSheet);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

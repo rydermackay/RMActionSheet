@@ -80,9 +80,7 @@
                              }];
     
     [actionSheet addCancelButtonWithTitle:@"Cancel"
-                                   action:^{
-                                       NSLog(@"Cancel");
-                                   }];
+                                   action:nil];
     
     [actionSheet showFromBarButtonItem:sender animated:YES];
     

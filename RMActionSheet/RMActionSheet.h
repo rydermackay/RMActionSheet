@@ -23,8 +23,12 @@ typedef void (^RMActionSheetAnimationBlock)(RMActionSheet *sheet);
 @property (nonatomic, copy) RMActionSheetBlock willDismissBlock;
 @property (nonatomic, copy) RMActionSheetBlock didDismissBlock;
 
+@property (nonatomic, copy) RMActionSheetBlock cancelAction;
+
++ (id)actionSheet;
 + (id)actionSheetWithTitle:(NSString *)title;
 
+- (id)init;
 - (id)initWithTitle:(NSString *)title;
 
 - (void)addButtonWithTitle:(NSString *)title action:(RMActionSheetBlock)action;
