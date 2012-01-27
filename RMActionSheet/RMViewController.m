@@ -61,7 +61,7 @@
 
 - (IBAction)actionButtonTapped:(id)sender
 {
-    RMActionSheet *actionSheet = [RMActionSheet actionSheetWithTitle:@"Sup?"];
+    RMActionSheet *actionSheet = [RMActionSheet actionSheet];
     
     
     [actionSheet addDestructiveButtonWithTitle:@"Destroy"

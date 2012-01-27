@@ -28,7 +28,6 @@ typedef void (^RMActionSheetAnimationBlock)(RMActionSheet *sheet);
 + (id)actionSheet;
 + (id)actionSheetWithTitle:(NSString *)title;
 
-- (id)init;
 - (id)initWithTitle:(NSString *)title;
 
 - (void)addButtonWithTitle:(NSString *)title action:(RMActionSheetBlock)action;

@@ -28,11 +28,6 @@
     return [[[self class] alloc] initWithTitle:title];
 }
 
-- (id)init
-{
-    return [self initWithTitle:nil];
-}
-
 - (id)initWithTitle:(NSString *)title
 {
     return [self initWithTitle:title
