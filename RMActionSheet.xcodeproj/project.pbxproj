@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1365B714D6F20000A3C896 /* RMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1365B614D6F20000A3C896 /* RMAlertView.m */; };
 		0DB0785014C234B300307541 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB0784F14C234B300307541 /* UIKit.framework */; };
 		0DB0785214C234B300307541 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB0785114C234B300307541 /* Foundation.framework */; };
 		0DB0785414C234B300307541 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB0785314C234B300307541 /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D1365B514D6F20000A3C896 /* RMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMAlertView.h; sourceTree = "<group>"; };
+		0D1365B614D6F20000A3C896 /* RMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAlertView.m; sourceTree = "<group>"; };
 		0DB0784B14C234B300307541 /* RMActionSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMActionSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DB0784F14C234B300307541 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0DB0785114C234B300307541 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				0DB0786514C234B300307541 /* RMViewController.m */,
 				0DB0786C14C2350600307541 /* RMActionSheet.h */,
 				0DB0786D14C2350600307541 /* RMActionSheet.m */,
+				0D1365B514D6F20000A3C896 /* RMAlertView.h */,
+				0D1365B614D6F20000A3C896 /* RMAlertView.m */,
 				0DB0785614C234B300307541 /* Supporting Files */,
 			);
 			path = RMActionSheet;
@@ -170,6 +175,7 @@
 				0DB0786014C234B300307541 /* RMAppDelegate.m in Sources */,
 				0DB0786614C234B300307541 /* RMViewController.m in Sources */,
 				0DB0786E14C2350600307541 /* RMActionSheet.m in Sources */,
+				0D1365B714D6F20000A3C896 /* RMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +287,7 @@
 				0DB0786B14C234B300307541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

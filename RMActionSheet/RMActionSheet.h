@@ -11,17 +11,17 @@
 @class RMActionSheet;
 
 typedef void (^RMActionSheetBlock)();
-typedef void (^RMActionSheetAnimationBlock)(RMActionSheet *sheet);
+typedef void (^RMActionSheetAnimationBlock)(UIActionSheet *actionSheet);
 
 @interface RMActionSheet : UIActionSheet <UIActionSheetDelegate> {
     NSMutableArray *actionBlocks;
 }
 
-@property (nonatomic, copy) RMActionSheetBlock willPresentBlock;
-@property (nonatomic, copy) RMActionSheetBlock didPresentBlock;
+@property (nonatomic, copy) RMActionSheetAnimationBlock willPresentBlock;
+@property (nonatomic, copy) RMActionSheetAnimationBlock didPresentBlock;
 
-@property (nonatomic, copy) RMActionSheetBlock willDismissBlock;
-@property (nonatomic, copy) RMActionSheetBlock didDismissBlock;
+@property (nonatomic, copy) RMActionSheetAnimationBlock willDismissBlock;
+@property (nonatomic, copy) RMActionSheetAnimationBlock didDismissBlock;
 
 @property (nonatomic, copy) RMActionSheetBlock cancelAction;
 
