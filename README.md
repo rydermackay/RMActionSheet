@@ -10,33 +10,33 @@ These examples are fairly straightforward:
 
 ## RMActionSheet
 
-	RMActionSheet *actionSheet = [RMActionSheet actionSheetWithTitle:@"Title"];
-		
-	[actionSheet addDestructiveButtonTitle:@"Destroy Foo"
-	action:^{
-		NSLog(@"foo destroyed");
-	}];
-	
-		[actionSheet addButtonTitle:@"Bar"
-	action:^{
-		[self bar];
-	}];
-	
-		[actionSheet addCancelButtonTitle:@"Cancel"
-			action:NULL];
-	
-	[actionSheet showFromBarButtonItem:self.barButtonItem animated:YES];
+    RMActionSheet *actionSheet = [RMActionSheet actionSheetWithTitle:@"Title"];
+    
+    [actionSheet addDestructiveButtonTitle:@"Destroy Foo"
+                                    action:^{
+                                        NSLog(@"foo destroyed");
+                                    }];
+    
+    [actionSheet addButtonTitle:@"Bar"
+                         action:^{
+                             [self bar];
+                         }];
+    
+    [actionSheet addCancelButtonTitle:@"Cancel"
+                               action:NULL];
+    
+    [actionSheet showFromBarButtonItem:self.barButtonItem animated:YES];
 
 
 ## RMAlertView
 
-	RMAlertView *alertView = [RMAlertView alertViewWithTitle:@"Title" message:@"Hey, weird something happened!"];
+    RMAlertView *alertView = [RMAlertView alertViewWithTitle:@"Title" message:@"Hey, weird something happened!"];
 	[alertView addButtonTitle:@"OK"
-		action:^{
-			NSLog(@"OK");
-		}];
+                       action:^{
+                           NSLog(@"OK");
+                       }];
 	[alertView addCancelButtonTitle:@"Cancel"
-		action:NULL];
+                             action:NULL];
 	[alertView show];
 
 ## Animation Blocks
