@@ -50,7 +50,11 @@
                   cancelButtonTitle:cancelButtonTitle
                   otherButtonTitles:otherButtonTitles, nil])
     {
-        actionBlocks = [NSMutableArray array];
+#if __has_feature(objc_arc)
+            actionBlocks = [NSMutableArray array];
+#else   
+            actionBlocks = [NSMutableArray new];
+#endif
     }
     
     return self;
@@ -145,5 +149,20 @@
 {
     return YES;
 }
+
+#if __has_feature(objc_arc)
+#else
+- (void)dealloc
+{
+    [actionBlocks release];
+    self.cancelAction = nil;
+    self.didDismissBlock = nil;
+    self.willDismissBlock = nil;
+    self.willPresentBlock = nil;
+    self.didPresentBlock = nil;
+    
+    [super dealloc];
+}
+#endif
 
 @end
