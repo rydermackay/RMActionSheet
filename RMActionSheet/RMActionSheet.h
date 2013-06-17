@@ -3,19 +3,15 @@
 //  RMActionSheet
 //
 //  Created by Ryder Mackay on 12-01-14.
-//  Copyright (c) 2012 Endloop Mobile. All rights reserved.
+//  Copyright (c) 2012 Ryder Mackay. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class RMActionSheet;
-
 typedef void (^RMActionSheetBlock)();
 typedef void (^RMActionSheetAnimationBlock)(UIActionSheet *actionSheet);
 
-@interface RMActionSheet : UIActionSheet <UIActionSheetDelegate> {
-    NSMutableArray *actionBlocks;
-}
+@interface RMActionSheet : UIActionSheet
 
 @property (nonatomic, copy) RMActionSheetAnimationBlock willPresentBlock;
 @property (nonatomic, copy) RMActionSheetAnimationBlock didPresentBlock;
@@ -25,8 +21,8 @@ typedef void (^RMActionSheetAnimationBlock)(UIActionSheet *actionSheet);
 
 @property (nonatomic, copy) RMActionSheetBlock cancelAction;
 
-+ (id)actionSheet;
-+ (id)actionSheetWithTitle:(NSString *)title;
++ (instancetype)actionSheet;
++ (instancetype)actionSheetWithTitle:(NSString *)title;
 
 - (id)initWithTitle:(NSString *)title;
 

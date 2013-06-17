@@ -17,6 +17,7 @@
 		0DB0786314C234B300307541 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0786114C234B300307541 /* MainStoryboard.storyboard */; };
 		0DB0786614C234B300307541 /* RMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0786514C234B300307541 /* RMViewController.m */; };
 		0DB0786E14C2350600307541 /* RMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0786D14C2350600307541 /* RMActionSheet.m */; };
+		0DBFA223176EEDE50063C9C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBFA222176EEDE50063C9C0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0DB0786514C234B300307541 /* RMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMViewController.m; sourceTree = "<group>"; };
 		0DB0786C14C2350600307541 /* RMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMActionSheet.h; sourceTree = "<group>"; };
 		0DB0786D14C2350600307541 /* RMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMActionSheet.m; sourceTree = "<group>"; };
+		0DBFA222176EEDE50063C9C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		0DB0785614C234B300307541 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0DBFA222176EEDE50063C9C0 /* Default-568h@2x.png */,
 				0DB0785714C234B300307541 /* RMActionSheet-Info.plist */,
 				0DB0785814C234B300307541 /* InfoPlist.strings */,
 				0DB0785B14C234B300307541 /* main.m */,
@@ -134,8 +137,9 @@
 		0DB0784214C234B300307541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RGM;
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "Endloop Mobile";
+				ORGANIZATIONNAME = "Ryder Mackay";
 			};
 			buildConfigurationList = 0DB0784514C234B300307541 /* Build configuration list for PBXProject "RMActionSheet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -161,6 +165,7 @@
 			files = (
 				0DB0785A14C234B300307541 /* InfoPlist.strings in Resources */,
 				0DB0786314C234B300307541 /* MainStoryboard.storyboard in Resources */,
+				0DBFA223176EEDE50063C9C0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

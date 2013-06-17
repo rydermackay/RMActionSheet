@@ -3,27 +3,23 @@
 //  RMActionSheet
 //
 //  Created by Ryder Mackay on 12-01-14.
-//  Copyright (c) 2012 Endloop Mobile. All rights reserved.
+//  Copyright (c) 2012 Ryder Mackay. All rights reserved.
 //
 
 #import "RMActionSheet.h"
 
+@interface RMActionSheet () <UIActionSheetDelegate>
+@property (nonatomic, strong) NSMutableArray *actionBlocks;
+@end
+
 @implementation RMActionSheet
 
-@synthesize willPresentBlock;
-@synthesize didPresentBlock;
-
-@synthesize willDismissBlock;
-@synthesize didDismissBlock;
-
-@synthesize cancelAction;
-
-+ (id)actionSheet
++ (instancetype)actionSheet
 {
     return [self actionSheetWithTitle:nil];
 }
 
-+ (id)actionSheetWithTitle:(NSString *)title
++ (instancetype)actionSheetWithTitle:(NSString *)title
 {
     return [[[self class] alloc] initWithTitle:title];
 }
@@ -47,9 +43,8 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
                            delegate:self
                   cancelButtonTitle:cancelButtonTitle
              destructiveButtonTitle:destructiveButtonTitle
-                  otherButtonTitles:otherButtonTitles, nil])
-    {
-        actionBlocks = [NSMutableArray new];
+                  otherButtonTitles:otherButtonTitles, nil]) {
+        _actionBlocks = [NSMutableArray new];
     }
     
     return self;
@@ -59,9 +54,9 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 {
     [super addButtonWithTitle:title];
     
-    id object = (action != nil) ? [action copy] : [NSNull null];
+    id object = action ? [action copy] : [NSNull null];
     
-    [actionBlocks addObject:object];
+    [self.actionBlocks addObject:object];
 }
 
 - (void)addCancelButtonWithTitle:(NSString *)title action:(RMActionSheetBlock)action
@@ -92,56 +87,42 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
 {
-    if (self.willPresentBlock != nil)
-    {
+    if (self.willPresentBlock)
         self.willPresentBlock(actionSheet);
-    }
 }
 
 - (void)didPresentActionSheet:(UIActionSheet *)actionSheet
 {
-    if (self.didPresentBlock != nil)
-    {
+    if (self.didPresentBlock)
         self.didPresentBlock(actionSheet);
-    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    RMActionSheetBlock block = [actionBlocks objectAtIndex:buttonIndex];
+    RMActionSheetBlock block = self.actionBlocks[buttonIndex];
     
-    if ((block != nil) && ([block isEqual:[NSNull null]] == NO))
-    {
+    if (block && ([block isEqual:[NSNull null]] == NO))
         block();
-    }
 }
 
 - (void)actionSheetCancel:(UIActionSheet *)actionSheet
 {
-    if (self.cancelAction != nil)
-    {
+    if (self.cancelAction)
         self.cancelAction();
-    }
     else
-    {
         [self dismissWithClickedButtonIndex:self.cancelButtonIndex animated:YES];
-    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (self.didDismissBlock != nil)
-    {
+    if (self.didDismissBlock)
         self.didDismissBlock(actionSheet);
-    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (self.willDismissBlock != nil)
-    {
+    if (self.willDismissBlock)
         self.willDismissBlock(actionSheet);
-    }
 }
 
 @end
